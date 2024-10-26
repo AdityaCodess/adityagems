@@ -1,0 +1,240 @@
+/* Reset styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Georgia', serif;
+    background-color: #f4d9da;
+    /* Soft pink with slight warmth */
+    color: #333;
+    /* Neutral text color */
+    line-height: 1.6;
+}
+
+/* Navbar */
+.navbar {
+    background: linear-gradient(90deg, #333, #4a4a4a);
+    /* Elegant gradient for navbar */
+    color: #f4d9da;
+    /* Light pink text */
+    padding: 1rem;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.navbar-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    height: 50px;
+}
+
+.menu-toggle {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #f4d9da;
+}
+
+.nav-links {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #f4d9da;
+    padding: 0.5rem;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #ffaaaa;
+    /* Slightly brighter pink on hover */
+}
+
+.nav-btn:hover{
+    cursor: pointer;
+}
+
+.nav-links.active {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: linear-gradient(90deg, #333, #4a4a4a);
+    width: 100%;
+    text-align: center;
+}
+
+/* Hero Section */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: linear-gradient(135deg, #f4d9da, #ffeaea);
+    /* Soft pink gradient */
+    color: #333;
+    padding: 6rem 1rem;
+    height: 100vh;
+}
+
+.hero-text h1 {
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+    color: #333;
+    /* Main text in black */
+}
+
+.hero-text p {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    color: #555;
+    /* Subtle gray for secondary text */
+}
+
+.btn-shop {
+    padding: 0.75rem 1.5rem;
+    background-color: #333;
+    color: #f4d9da;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-shop:hover {
+    background-color: #4a4a4a;
+}
+
+/* Products */
+.products {
+    padding: 4rem 2rem;
+    text-align: center;
+    background-color: #ffffff;
+    /* Clean white background for contrast */
+}
+
+.products h2 {
+    font-size: 2.2rem;
+    margin-bottom: 2rem;
+    color: #333;
+}
+
+.product-grid {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.product-card {
+    background: linear-gradient(135deg, #f4d9da, #ffeaea);
+    border: 1px solid #e0c3c3;
+    border-radius: 8px;
+    padding: 1rem;
+    width: 220px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+}
+
+.product-card img {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+.btn-buy {
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    background-color: #333;
+    color: #f4d9da;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-buy:hover {
+    background-color: #4a4a4a;
+}
+
+/* About Section */
+.about {
+    padding: 4rem 2rem;
+    text-align: center;
+    background: linear-gradient(135deg, #f4d9da, #ffeaea);
+    color: #333;
+}
+
+.about h2 {
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+/* Footer */
+.footer {
+    background: linear-gradient(90deg, #333, #4a4a4a);
+    color: #f4d9da;
+    padding: 1rem;
+    text-align: center;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .hero-text h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero-text p {
+        font-size: 1rem;
+    }
+
+    .product-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-text h1 {
+        font-size: 2rem;
+    }
+
+    .hero-text p {
+        font-size: 0.9rem;
+    }
+
+    .btn-shop,
+    .btn-buy {
+        font-size: 0.9rem;
+    }
+}

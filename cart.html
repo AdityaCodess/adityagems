@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Cart - Aditya Gems</title>
+    <link rel="stylesheet" href="cart.css">
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <img class="logo" src="logo.png" alt="Aditya Gems Logo">
+            <div class="menu-toggle" onclick="toggleNavbar()">&#9776;</div>
+            <div class="nav-links" id="navLinks">
+                <a href="home.html">Home</a>
+                <a href="about.html">About</a>
+                <a class="nav-btn" onclick="window.location.href='product.html'">Products</a>
+                <a href="contact.html">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Cart Section -->
+    <section class="cart">
+        <h2 style="margin-top: 50px;">Your Shopping Cart</h2>
+        <div class="cart-items" id="cartItems">
+            <!-- Cart items will be added here dynamically -->
+        </div>
+        <div class="cart-total">
+            <p>Total: <span id="totalAmount">$0.00</span></p>
+            <button class="btn-checkout" onclick="checkout()">Proceed to Checkout</button>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2024 Aditya Gems. All rights reserved.</p>
+        <p>Contact: jitender80bhalla@gmail.com | +91-8708398603 | +91-9050320999</p>
+    </footer>
+
+    <script src="cart.js"></script>
+    <script>
+        function toggleNavbar() {
+            const navLinks = document.getElementById("navLinks");
+            navLinks.classList.toggle("active");
+        }
+    </script>
+</body>
+
+</html>

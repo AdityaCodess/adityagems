@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Aditya Gems - Products</title>
+    <link rel="stylesheet" href="product.css">
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <img class="logo" src="logo.png" alt="Aditya Gems Logo">
+            <div class="menu-toggle" onclick="toggleNavbar()">&#9776;</div>
+            <div class="nav-links">
+                <a href="home.html#home">Home</a>
+                <a href="home.html#about">About</a>
+                <a href="product.html">Products</a>
+                <a class="nav-btn" onclick="window.location.href='cart.html'">Your Cart</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="product-page">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <h3>Categories</h3>
+            <ul>
+                <li><a href="#" class="active" data-category="necklaces">Necklaces</a></li>
+                <li><a href="#" data-category="bracelets">Bracelets</a></li>
+                <li><a href="#" data-category="gold">Gold</a></li>
+                <li><a href="#" data-category="silver">Silver</a></li>
+                <li><a href="#" data-category="rings">Rings</a></li>
+            </ul>
+        </aside>
+
+        <!-- Products Section -->
+        <main class="product-list">
+            <h2>Our Products</h2>
+            <div class="product-grid">
+                <div class="product-card" data-category="necklaces">
+                    <img src="necklace1.jpg" alt="Necklace 1">
+                    <h3>Necklace 1</h3>
+                    <p>Stunning gold necklace.</p>
+                    <span class="price">$150</span>
+                    <button class="btn-buy">Add to Cart</button>
+                </div>
+                <div class="product-card" data-category="necklaces">
+                    <img src="necklace2.jpg" alt="Necklace 2">
+                    <h3>Necklace 2</h3>
+                    <p>Elegant silver necklace.</p>
+                    <span class="price">$130</span>
+                    <button class="btn-buy">Add to Cart</button>
+                </div>
+                <div class="product-card" data-category="bracelets">
+                    <img src="bracelet1.jpg" alt="Bracelet 1">
+                    <h3>Bracelet 1</h3>
+                    <p>Elegant silver bracelet.</p>
+                    <span class="price">$100</span>
+                    <button class="btn-buy">Add to Cart</button>
+                </div>
+                <div class="product-card" data-category="gold">
+                    <img src="goldring1.jpg" alt="Gold Ring 1">
+                    <h3>Gold Ring 1</h3>
+                    <p>Classic gold ring with a diamond.</p>
+                    <span class="price">$200</span>
+                    <button class="btn-buy">Add to Cart</button>
+                </div>
+                <div class="product-card" data-category="silver">
+                    <img src="silverchain1.jpg" alt="Silver Chain 1">
+                    <h3>Silver Chain 1</h3>
+                    <p>Stylish silver chain.</p>
+                    <span class="price">$120</span>
+                    <button class="btn-buy">Add to Cart</button>
+                </div>
+                <div class="product-card" data-category="rings">
+                    <img src="ring1.jpg" alt="Ring 1">
+                    <h3>Ring 1</h3>
+                    <p>Beautiful diamond ring.</p>
+                    <span class="price">$250</span>
+                    <button class="btn-buy">Add to Cart</button>
+                </div>
+                <!-- Add more products as needed -->
+            </div>
+        </main>
+    </div>
+
+    <footer id="contact" class="footer">
+        <p>&copy; 2024 Aditya Gems. All rights reserved.</p>
+        <p>Contact: jitender80bhalla@gmail.com | +91-8708398603 | +91-9050320999</p>
+    </footer>
+
+    <script src="product.js"></script>
+    <script>
+        function toggleNavbar() {
+            const navLinks = document.querySelector('.nav-links');
+            navLinks.classList.toggle('active');
+        }
+    </script>
+</body>
+
+</html>

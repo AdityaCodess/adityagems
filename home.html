@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Aditya Gems</title>
+    <link rel="stylesheet" href="home.css">
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <img class="logo" src="logo.png" alt="Aditya Gems Logo">
+            <div class="menu-toggle" onclick="toggleNavbar()">&#9776;</div>
+            <div class="nav-links" id="navLinks">
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a  class="nav-btn" onclick="window.location.href='product.html'">Products</a>
+                <a class="nav-btn" onclick="window.location.href='cart.html'">Cart</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Banner -->
+    <section id="home" class="hero">
+        <div class="hero-text">
+            <h1>Welcome to Aditya Gems</h1>
+            <p>Explore the finest collection of gems and jewelry, crafted with elegance and precision.</p>
+            <a href="#products" class="btn-shop">Shop Now</a>
+        </div>
+    </section>
+
+    <!-- Featured Products -->
+    <section id="products" class="products">
+        <h2 style="margin-top: 50px;">Featured Products</h2>
+        <div class="product-grid">
+            <div class="product-card">
+                <img src="product1.jpg" alt="Product 1">
+                <h3>Product 1</h3>
+                <p>Beautifully crafted gemstone.</p>
+                <button class="btn-buy">Buy Now</button>
+            </div>
+            <div class="product-card">
+                <img src="product2.jpg" alt="Product 2">
+                <h3>Product 2</h3>
+                <p>Elegant gold jewelry.</p>
+                <button class="btn-buy">Buy Now</button>
+            </div>
+
+            <div class="product-card">
+                <img src="product2.jpg" alt="More products">
+                <h3>Product 2</h3>
+                <p>More Products</p>
+                <button class="btn-buy" onclick="window.location.href='product.html'">Buy Now</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <h2>About Aditya Gems</h2>
+        <p>Aditya Gems has been a trusted name in the gem and jewelry industry for years. We offer a wide range of
+            precious stones, crafted to perfection.</p>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact" class="footer">
+        <p>&copy; 2024 Aditya Gems. All rights reserved.</p>
+        <p>Contact: jitender80bhalla@gmail.com | +91-8708398603 | +91-9050320999
+        </p>
+    </footer>
+
+    <script>
+        function toggleNavbar() {
+            const navLinks = document.getElementById("navLinks");
+            navLinks.classList.toggle("active");
+        }
+    </script>
+</body>
+
+</html>
